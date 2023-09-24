@@ -103,6 +103,7 @@ void	ft_create_header_file(std::string className, char **av)
 	}
 	outfile << "};\n\n";
 	outfile << "#endif\n";
+	outfile.close();
 }
 
 void	ft_create_main_file(std::string className, char **av)
@@ -116,6 +117,7 @@ void	ft_create_main_file(std::string className, char **av)
 		outfile << ft_create_copy_constructor(className, 1) << "\n";
 		outfile << ft_create_operator_overload(className, 1) << "\n";
 	}
+	outfile.close();
 }
 
 int	main(int ac, char **av)
